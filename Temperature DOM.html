@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Temperature Scale</h1>
+
+    <form onsubmit="temp(); return false";>
+        <label for="t">Enter Temperature</label>
+        <input type="number" name="t" id="t" required>
+        <button type="submit">Check</button>
+    </form>
+
+    <p id="text"></p>
+
+
+
+
+    <script>
+        function temp() {
+            let Temperature = document.querySelector("#t").value;
+            if (Temperature < 0) {
+            document.querySelector("#text").innerHTML = "Jab sardi itni zor se ho, toh insaan bhi ekdum silent mode pe chala jata hai!"
+        } else if (Temperature > 0 && Temperature <= 10) {
+            document.querySelector("#text").innerHTML = "Sardi aayi hai, sweater nikalo bhai aur Abbu kehte hain, Garam chai peelo, beta"
+        } else if (Temperature > 10 && Temperature <= 20) {
+            document.querySelector("#text").innerHTML = "Bilkul sahi mausam hai, chai ke sath pakoray kha lo!"
+        }  else if (Temperature > 20 && Temperature <= 30) {
+            document.querySelector("#text").innerHTML = " ab kuchh bhi pehno theek hai. Aaj se shorts aur shades ka zamana hai!"
+        }  else if (Temperature > 30 && Temperature <= 40) {
+            document.querySelector("#text").innerHTML = "Garmi ke is daldal mein, thandak ka sahara AC aur ice cream hi hai!"
+        }  else if (Temperature > 40) {
+            document.querySelector("#text").innerHTML = "Bohat ziada garmi, fridge mein hi rahiye!"
+        }
+        else {
+            document.querySelector("#text").innerHTML = "Wrong Info"
+        }
+        }
+        
+
+    </script>
+</body>
+</html>

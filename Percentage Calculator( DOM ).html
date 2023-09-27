@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Percentage Calculator</h1>
+    
+    <form onsubmit="res(); return false;">
+        <label for="ob">Obtained Mark</label>
+    <input type="number" name="ob" id="ob" required>
+
+    <label for="tm">Total Mark</label>
+    <input type="number" name="tm" id="tm" required>
+
+    <button type="submit">Calculate</button>
+    </form>
+
+    <p id="text"></p>
+
+
+    <script>
+        
+        function res() {
+            let Obtained_marks = document.querySelector("#ob").value;
+            let Total_marks = document.querySelector("#tm").value;
+
+            result = (Obtained_marks/Total_marks)*100
+
+        if (result<60) {
+            document.querySelector("#text").innerHTML = "Tujhe toh 'Ctrl+Alt+Delete' se bhi kuch nahi ho sakta! Ab coding ki jagah 'cooking' try karle "
+        } else if (result>=60 && result<70) {
+            document.querySelector("#text").innerHTML = "Kuch zyada hi CTRL+C, CTRL+V ka istemal kiya lagta ha"
+        } else if (result>=70 && result<80) {
+            document.querySelector("#text").innerHTML = "Yeh kya coding hai bhai? Tu toh 'debugging' se 'distracting' ho gaya hai!"
+        } else if (result>=80 && result<90) {
+            document.querySelector("#text").innerHTML = "Teri coding skills toh legendary hain! Tujhe toh Nobel Prize milna chahiye coding me"
+        } else if (result>=90 && result<=100) {
+            document.querySelector("#text").innerHTML = "Aap toh computer science ki Shakespeare ban gaye hain! Ab toh CPU bhi aapke code ko samajh nahi sakta"
+        } else {
+            document.querySelector("#text").innerHTML ="Invalid Input"
+        }
+        }
+        
+
+    </script>
+</body>
+</html>
